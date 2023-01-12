@@ -1,0 +1,37 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    border: 2px solid #E2C7CA;
+    margin: 1%;
+    padding: 1%;
+    // color: white;
+
+    img {
+        height: 200px;
+    }
+
+    .tagline {
+        color: #E2C7CA;
+        font-style: italic;
+        text-align: center;
+        padding-bottom: 5%;
+    }
+
+    h1 {
+        font-family: 'Big Shoulders Stencil Text', cursive;
+        text-align: center;
+    }
+
+    p {
+        text-align: left;
+        color: #E2C7CA;
+        opacity: 0.6;
+        font-size: 18px;
+        font-family: 'Big Shoulders Stencil Text', cursive;
+        line-height: 1.5;
+    }
+    
+}
