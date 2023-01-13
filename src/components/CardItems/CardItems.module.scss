@@ -4,17 +4,21 @@
     justify-content: center;
     align-items: center;
     width: 300px;
-    border: 2px solid #E2C7CA;
+    border: 2px solid #FF8575;
     margin: 1%;
     padding: 1%;
-    // color: white;
+    border-radius: 10px;
+    &:hover {
+        box-shadow: 0 0 11px rgba(33,33,33,.2);
+        transform: scale(1.01);
+    }
 
     img {
         height: 200px;
     }
 
     .tagline {
-        color: #E2C7CA;
+        color: #911404;
         font-style: italic;
         text-align: center;
         padding-bottom: 5%;
@@ -27,7 +31,7 @@
 
     p {
         text-align: left;
-        color: #E2C7CA;
+        color: #911404;
         opacity: 0.6;
         font-size: 18px;
         font-family: 'Big Shoulders Stencil Text', cursive;

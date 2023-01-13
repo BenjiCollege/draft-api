@@ -8,6 +8,9 @@ import CardList from '../../components/CardList';
 const Dashboard = (props) => {
     const { filterBeers, beers, setName, setAbv, setIsClassic, isClassic, abv, name } = props;
 
+// import image in the component
+
+
 
     return (
         <div className={styles.dashboard}>
