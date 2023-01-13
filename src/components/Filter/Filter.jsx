@@ -4,7 +4,7 @@ import styles from './Filter.module.scss';
 
 const Filter = (props) => {
 
-  const { filterBeers, setAbv, setIsClassic, isClassic, abv } = props;
+  const { filterBeers, setAbv, setIsClassic, isClassic, abv, ph, setPh, setIngredients, ingredients } = props;
 
   return (
     <form className={styles.form}>
@@ -14,6 +14,8 @@ const Filter = (props) => {
       <input type="checkbox" id="classic" value="first_brewed" onChange={() => { filterBeers(!isClassic); setIsClassic(!isClassic) }} />
       <label htmlFor="classic"> Classic Range (brewed before 2011) </label>
       <br />
+      <input type="checkbox" id="ph" value="ph_gt" onChange={() => { filterBeers(!ph); setPh(!ph) }} />
+      <label htmlFor="ph"> PH level (4.0) </label>
     </form>
   );
 };

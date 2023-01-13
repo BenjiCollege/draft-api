@@ -4,7 +4,7 @@ import SearchBar from "../SearchBar";
 import Filter from "../Filter";
 
 const SideBar = (props) => {
-  const { filterBeers, setAbv, setName, setIsClassic, isClassic, abv, name } = props;
+  const { filterBeers, setAbv, setName, setIsClassic, isClassic, abv, name, ph, setPh} = props;
 
   return (
     <section className={styles.sideBar}>
@@ -18,6 +18,8 @@ const SideBar = (props) => {
         setIsClassic={setIsClassic}
         isClassic={isClassic}
         abv={abv}
+        ph={ph}
+        setPh={setPh}
       />
     </section>
   );

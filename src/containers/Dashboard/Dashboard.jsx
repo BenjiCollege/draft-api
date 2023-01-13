@@ -6,11 +6,7 @@ import CardList from '../../components/CardList';
 
 
 const Dashboard = (props) => {
-    const { filterBeers, beers, setName, setAbv, setIsClassic, isClassic, abv, name } = props;
-
-// import image in the component
-
-
+    const { filterBeers, beers, setName, setAbv, setIsClassic, isClassic, abv, name, ph, setPh} = props;
 
     return (
         <div className={styles.dashboard}>
@@ -22,6 +18,8 @@ const Dashboard = (props) => {
                 isClassic={isClassic}
                 abv={abv}
                 name={name}
+                ph={ph}
+                setPh={setPh}
             />
             <CardList beers={beers} />
         </div>

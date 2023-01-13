@@ -12,11 +12,12 @@ const App = () => {
   const [name, setName] = useState();
   const [abv, setAbv] = useState(false);
   const [isClassic, setIsClassic] = useState(false);
+  const [ph, setPh] = useState(false);
 
 
   useEffect(() => {
     filterBeers();
-  }, [name, abv, isClassic]);
+  }, [name, abv, isClassic, ph]);
 
   // fetch data from API based on the filter functionality
   const filterBeers = () => {
@@ -26,11 +27,15 @@ const App = () => {
     //search by alchool content
     const abvQueryStr = abv ? `&abv_gt=6` : "";
 
-    // search for classic beers
-    const ClassicFilterStr = isClassic ? `&brewed_before=01-2011` : "";
+    //search for classic beers
+    const classicFilterStr = isClassic ? `&brewed_before=01-2011` : "";
+
+    //search by ph level
+    const phQueryStr = ph ? `&ph_gt=4` : "";
+
 
     // general URL to get random beers
-    const url = `https://api.punkapi.com/v2/beers?per_page=50${searchTermStr}${abvQueryStr}${ClassicFilterStr}`;
+    const url = `https://api.punkapi.com/v2/beers?per_page=50${searchTermStr}${abvQueryStr}${classicFilterStr}${phQueryStr} `;
     return fetch(url)
       .then((res) => res.json())
       .then((res) => {
@@ -50,6 +55,8 @@ const App = () => {
         setIsClassic={setIsClassic}
         isClassic={isClassic}
         name={name}
+        ph={ph}
+        setPh={setPh}
       />
     </div>
   );
