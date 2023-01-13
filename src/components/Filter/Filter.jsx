@@ -4,7 +4,7 @@ import styles from './Filter.module.scss';
 
 const Filter = (props) => {
 
-  const { filterBeers, setAbv, setIsClassic, isClassic, abv, ph, setPh, setIngredients, ingredients } = props;
+  const { filterBeers, setAbv, setIsClassic, isClassic, abv, ph, setPh} = props;
 
   return (
     <form className={styles.form}>
