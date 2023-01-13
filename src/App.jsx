@@ -21,7 +21,7 @@ const App = () => {
 
   // fetch data from API based on the filter functionality
   const filterBeers = () => {
-    // search beers by a specific term input used in search box
+    //search beers by a specific term input used in search box
     const searchTermStr = name ? `&beer_name=${name}` : "";
 
     //search by alcohol content
@@ -30,6 +30,7 @@ const App = () => {
     //search for classic beers
     const classicFilterStr = isClassic ? `&brewed_before=01-2011` : "";
 
+    //! this is not working because there is no parameter for ph in the API
     //search by ph level
     const phQueryStr = ph ? `&ph_gt=4` : "";
 
