@@ -10,7 +10,7 @@ const SearchBar = (props) => {
       <h2>Search your beer by name</h2>
       <input
         type="text"
-        placeholder="I'm feeling thirsty..."
+        placeholder="You look thirsty, what are you looking for?"
         onInput={(e) => {
           setName(e.target.value);
           filterBeers(name);
