@@ -21,10 +21,10 @@ const App = () => {
 
   // fetch data from API based on the filter functionality
   const filterBeers = () => {
-    // search beers by a specific term inputed by used in search box
+    // search beers by a specific term input used in search box
     const searchTermStr = name ? `&beer_name=${name}` : "";
 
-    //search by alchool content
+    //search by alcohol content
     const abvQueryStr = abv ? `&abv_gt=6` : "";
 
     //search for classic beers
